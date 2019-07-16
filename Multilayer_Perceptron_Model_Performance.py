@@ -88,7 +88,6 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.layers.noise import AlphaDropout
 
-# week2 ppt 참조
 model = Sequential()
 model.add(Dense(16, input_shape=(1000,), # max_word = 1000과 동일
                     kernel_initializer='glorot_uniform')) 
