@@ -747,7 +747,7 @@ plot_train_validation_loss(history, 'Conv1D, Dropout, BatchNormalization, CuDNNG
 
 # ## LSTM, GRU, Recurrent Dropout
 
-# ### 학습하기(LSTM, Recurrent Dropout 적용, 시간이 오래 걸리므로 모든 실습 뒤에 실행해볼 것)
+# ### 학습하기(LSTM, Recurrent Dropout 적용)
 
 # In[ ]:
 
