@@ -233,29 +233,3 @@ p = model.predict(test_imgs, batch_size=1, verbose=1)
 print('p = {}'.format(p))
 print('class = {}'.format(classes[np.argmax(p)])) # argmax : https://rfriend.tistory.com/356
 
-
-# ### 참고자료
-
-# #### 1. Keras documentation : https://keras.io
-# #### 2. Keras FAQ: Frequently Asked Keras Questions : https://keras.io/getting-started/faq/
-# #### 3. Training 한 Weight는 어떻게 저장하나요? : https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model
-# #### 4. Pre-trained modeld은 어떻게 쓰나요? : https://keras.io/getting-started/faq/#how-can-i-use-pre-trained-models-in-keras
-# #### 5 Model을 Training 하면서 Checkpoint는 어떻게 설정하나요? : https://machinelearningmastery.com/check-point-deep-learning-models-keras/
-# #### 6. 각 Epoch의 시작과 끝, Training의 시작과 끝에 custom function을 실행 시킬 수 있나요? : https://keunwoochoi.wordpress.com/2016/07/16/keras-callbacks/
-# #### 8. Data preprocessing을 위한 class가 있나요? : https://keras.io/preprocessing/image/
-# #### 9. Custom layer를 생성 할 수 있나요? : https://keras.io/layers/writing-your-own-keras-layers/
-# #### 10. Residual network는 어떻게 설계하나요? : https://ctmakro.github.io/site/on_learning/resnet_keras.html
-
-# ### TODO
-# - Enhance your model to increase its accuracy as much as possible
-
-# #### Guidelines
-# 1. **Adam optimizer**를 사용
-# 2. Convolutional layer, Dense layer의 **kernel_regularizer를 0.00001**로 설정할 것
-# 3. Convolutional layer, Dense layer의 **kernel_initializer를 'he_uniform'**으로 설정할 것
-# 3. 모든 Convolutional layer의 **Filter_size를 (3,3)**으로 설정할 것, Padding을 사용할 것
-# 4. Output Layer의 Softmax를 제외한 **Activation function은 'LeakyReLU'**를 사용할 것`
-# 5. Pooling layer는 **MaxPooling(size = (2,2))**를 이용할 것
-# 6. **BatchNormalization Layer**를 사용하고 내부 parameter는 **default**를 그대로 사용할 것
-# 7. Loss function(categorical_crossentropy), metric(Accuracy)는 그대로 유지할 것
-# 8. Mini batch size = 128, Epochs=50으로 진행할 것
