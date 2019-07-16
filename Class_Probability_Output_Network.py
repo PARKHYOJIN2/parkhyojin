@@ -182,7 +182,6 @@ def PyNy(y_hat, PD_LEN) :
     P_y = beta.cdf(cdf_x, PD_a, PD_b)
     N_y = beta.cdf(cdf_x, N_a, N_b)
 
-    # plot 을 안쓰실때는 # 으로 막아두시길
     for i in range(len(N_y)) :
         N_y[i] = 1-N_y[i]
 
@@ -285,7 +284,7 @@ def kernel_regression(One_kernel, Zero_kernel, one_another, C) :
     all_data = one_another[0] + one_another[1]
 
     all_tilde = []
-    # 커널에 달라붙은 데이터를 이용(all_fr)하여 tilde 값을 구합니다.
+    # 커널에 달라붙은 데이터를 이용(all_fr)하여 tilde 값을 구다.
     for i in range(len(all_fr)):
         all_tilde.append(kernel_C(all_data, i, all_fr, C))
 
@@ -318,7 +317,7 @@ def kernel_regression(One_kernel, Zero_kernel, one_another, C) :
 
 
 # stand = kernel 입니다.
-# 커널에 달라붙은 데이터의 var 및 mean 값을 이용하여 데이터의 값을 구합니다.
+# 커널에 달라붙은 데이터의 var 및 mean 값을 이용하여 데이터의 값을 구한다.
 def kernel_C(list, idx, all_friend, C) :
     friend = all_friend[idx]
 
