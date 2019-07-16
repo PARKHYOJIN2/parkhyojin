@@ -129,8 +129,6 @@ model.add(Dense(16, input_shape=(1000,),
                     kernel_initializer='lecun_normal'))   
 model.add(Activation('selu'))
 model.add(AlphaDropout(0.1))
-# dropout(0.3): 전체에서 70%를 활용하여 mean, stddev 도출
-# AlphaDropout(0.1): mean, stddev은 그대로 두고, 10% 값만 잘라낸다
 
 for i in range(5):
     model.add(Dense(16, kernel_initializer='lecun_normal'))
@@ -189,6 +187,4 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
-
-# noise 데이터가 많으면, selu 모델 추천(ex. 센서데이터)
 
